@@ -61,3 +61,55 @@ Penentuan Ketua dan Wakil Ketua:
 Melakukan iterasi pada array untuk menemukan calon dengan suara terbanyak pertama (max1) dan kedua (max2).
 Output Hasil:
 Menampilkan total suara, jumlah suara sah, Ketua RT, dan Wakil Ketua RT.
+
+*NOMOR 3*
+Deskripsi Program
+Program di atas adalah implementasi pencarian elemen dalam array menggunakan pencarian biner (binary search). Program ini menerima input berupa jumlah elemen array (n), elemen yang dicari (k), dan elemen-elemen array itu sendiri. Jika elemen yang dicari ditemukan, program mengembalikan posisi indeks elemen tersebut; jika tidak, program menampilkan pesan bahwa elemen tidak ada.
+Fitur Utama
+Input Data:
+Program menerima input jumlah elemen array (n) dan elemen yang akan dicari (k).
+Array diisi dengan elemen-elemen yang diinput oleh pengguna.
+Proses Pencarian:
+Menggunakan algoritma pencarian biner, yang efisien untuk array yang terurut.
+Program mencari elemen k di dalam array dan mengembalikan posisi indeksnya jika ditemukan.
+Output Hasil:
+Menampilkan indeks elemen jika ditemukan.
+Menampilkan pesan TIDAK ADA jika elemen tidak ditemukan.
+Struktur Program
+Konstanta dan Variabel Global:
+NMAX: Konstanta yang menentukan batas maksimum ukuran array (1.000.000 elemen).
+data: Array global untuk menyimpan elemen-elemen input.
+Prosedur dan Fungsi:
+isiArray(n int):
+Mengisi array data dengan elemen-elemen input hingga jumlah n.
+posisi(n, k int) int:
+Mengimplementasikan pencarian biner untuk mencari elemen k dalam array data yang memiliki n elemen.
+Proses Utama:
+Program membaca input n (jumlah elemen), k (elemen yang dicari), dan elemen-elemen array.
+Memanggil posisi untuk mencari elemen k.
+Menampilkan hasil pencarian.
+Detail Algoritma Pencarian Biner
+Kondisi Awal:
+Dua indeks, kiri (awal array) dan kanan (akhir array), digunakan untuk melacak batas pencarian.
+Langkah-langkah:
+Hitung indeks tengah (tengah = (kiri + kanan) / 2).
+Bandingkan elemen di indeks tengah dengan elemen yang dicari (k):
+Jika sama, kembalikan indeks tengah.
+Jika elemen tengah lebih kecil dari k, cari di bagian kanan (kiri = tengah + 1).
+Jika elemen tengah lebih besar dari k, cari di bagian kiri (kanan = tengah - 1).
+Ulangi hingga elemen ditemukan atau kiri > kanan.
+Kompleksitas:
+Waktu: 
+𝑂
+(
+log
+𝑛
+)
+O(logn) karena array dipangkas menjadi separuh setiap iterasi.
+Ruang: 
+𝑂
+(
+1
+)
+O(1) karena tidak memerlukan struktur data tambahan.
+
